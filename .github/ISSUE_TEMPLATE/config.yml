@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A bug in a tool that already exists
+    url: https://github.com/gledach
+    about: File it on that tool's own repository. This queue is only for tools that do not exist yet.
+  - name: What is already on the shelf
+    url: https://gledach.de
+    about: Five tools, with the figures and a written audit of what each one cannot see.
+  - name: No GitHub account
+    url: https://gledach.de/#slot-06
+    about: The same three answers by email work fine. The address is on the site, and anything worth building gets filed here afterwards.

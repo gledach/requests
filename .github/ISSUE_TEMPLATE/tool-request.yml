@@ -1,0 +1,74 @@
+name: Request a tool
+description: Something you check by hand that a tool could watch for you.
+title: "[request] "
+labels: ["tool request", "needs a source"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Three questions. They are the ones that decide whether a thing is watchable at
+        all, so a request that answers them can be judged in a minute rather than sitting
+        in a queue being polite at.
+
+        If you would rather not open a GitHub account, send the same three answers to
+        `request@gledach.de`. Anything worth building gets filed here afterwards, so the
+        queue stays public either way.
+
+  - type: textarea
+    id: by-hand
+    attributes:
+      label: What do you check by hand today, and how often?
+      description: >
+        The habit, not the feature. "Every Monday I open four council pages to see
+        whether a permit moved" is a better request than "a permit tracker", because the
+        habit says what you actually need to know and how late is too late.
+      placeholder: I check ... every ...
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Where is it published? A URL, even a bad one.
+      description: >
+        A page, a feed, a register, a PDF someone uploads every quarter. If the honest
+        answer is "nowhere, it is in my head or in somebody's inbox", say that. It is a
+        real answer and it gets a real reply.
+      placeholder: https://
+    validations:
+      required: true
+
+  - type: dropdown
+    id: account
+    attributes:
+      label: Does seeing it need an account?
+      description: >
+        This decides more than it looks like it does. A tool that needs your login is a
+        tool that holds your credentials, which is a different promise from the one every
+        tool on this shelf makes.
+      options:
+        - "No, anyone can open the page"
+        - "Yes, a free account"
+        - "Yes, a paid account or a contract"
+        - "I do not know"
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: What would you do differently if you knew sooner?
+      description: >
+        Optional, and it is the question that separates a tool from a feed. If knowing
+        earlier changes nothing you do, a tool that tells you earlier is just more
+        reading.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: others
+    attributes:
+      label: Who else
+      options:
+        - label: This would help more people than me, and I can say roughly who.
+          required: false
